@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libreria, página principal</title>
+  <link rel="stylesheet" href="./estilos/principal.css">
+  <!-- <script src="https://kit.fontawesome.com/8a43be431f.js" crossorigin="anonymous"></script> -->
+  <!--Referencia CSS-->
+  <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!--Script JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> -->
+  <script src="./librerias/jquery-3.6.0.min.js" defer></script>
+  <script src="./scripts/principal.js" type="module" defer></script>
+  <script src="./scripts/index2.js" type="module" defer></script>
+  <script src="./scripts/animacion-libreria-planeta.js" defer></script>
+
+  <!-- jQuery custom, para utilizar jQuery UI, son necesarios los 3 archivos siguientes -->
+  <!-- <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="./jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+  <script src="./jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
+</head>
+
+<body>
+  <div class="container-main-grid">
+    <header class="main-header">
+      <div class="row">
+        <div id="header-item-1" class="grow-3"><a href="./index.html"><object id="svg-object" alt="Logo librería" title="Librería logos" class="logo" data="./imagenes/Inkscape/logo_libreria_con_id.svg" type="image/svg+xml"></object></a>
+        </div>
+        <!-- <div id="header-item-1" class="grow-3"><a href="./index.html"><img src="./imagenes/Inkscape/logo_libreria.svg" alt="Logo librería" title="Librería logos" class="logo"></a></div> -->
+        <div id="header-item-2" class="grow-5">
+          <form action="#" method="get" id="form-barra-busqueda">
+            <input type="search" id="palabra-busqueda" class="barra-busqueda" name="search" aria-label="Buscar" placeholder="Busca un libro" autocomplete="off">
+            <!-- <input type="submit" title="Buscar" value="Buscar" class="btn-search"> -->
+            <input type="image" src="./imagenes/iconos/icono_lupa.png" alt="Submit" value="Buscar" width="25px" height="25px" class="btn-search">
+          </form>         
+        </div>   
+        <div id="header-item-3" class="grow-2"><i class="fas fa-user fa-2x icono icono-usuario" alt="Icono de cuenta" title="Acceder a su cuenta"></i></div>
+        <!-- <div id="header-item-3" class="grow-2"><img src="./imagenes/iconos/icono_usuario.png" alt="Icono de cuenta" title="Acceder a su cuenta" class="icono"></div> -->
+        <!-- <div id="header-item-4" class="grow-2">
+          <i class="fas fa-shopping-cart fa-2x icono icono-carrito-fa" alt="Carrito de compra" title="Ver el carrito de compra"></i>
+        </div> -->
+        <div id="header-item-4" class="grow-2"><img src="./imagenes/iconos/icono_carrito_gimp2.png" alt="Carrito de compra" title="Ver el carrito de compra" class="icono icono-carrito"></div>
+        <div id="carrito">
+          <div id="cabecera-carrito">
+            <!-- <i id="btn-cerrar-carrito" class="fas fa-window-close btn-cerrar"></i> -->
+            <p><b>CARRITO</b></p>
+          </div>
+          <hr>
+          <table id="table-libros-carrito">
+            <thead>
+              <th>Artículo |</th>
+              <th>Precio |</th>
+              <th>Cantidad |</th>
+              <th>Total artículo</th>
+              <th></th>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id="precio-total">
+            <!-- <button>Ir a mi carrito</button>
+            <button id="btn-vaciar-carrito">Eliminar todo</button> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="main-nav" id="barra-navegacion">
+      <div class="row">
+        <div class="grow-2">
+          <ul>
+            <li><img src="./imagenes/iconos/Spain-icon.png" alt="Icono lenguaje, español" aria-label="Cambiar idioma: español" class="icono-lenguaje"></li>
+            <li><img src="./imagenes/iconos/United-Kingdom-icon.png" alt="Icono lenguaje, inglés" aria-label="Cambiar idioma: inglés" class="icono-lenguaje"></li>
+          </ul>
+        </div>
+        <div class="grow-10">
+          <ul>
+            <li><a href="./formulario.html">Formulario de contacto</a> | </li>
+            <li><a href="./sobre-nosotros.html" id="enlace-sobre-nosotros">Sobre nosotros</a> | </li>
+            <li>Otros enlaces de interés</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="main-aside"></aside>
+    
+    <section class="main-section" id="main-section">
+      <h1 class="cabecera-contenedor-libros"></h1>      
+      <div id="contenedor-libros"></div>
+      <div id="mensajesAJAXEsquina"></div>
+    </section>
+
+    <footer class=main-footer>
+      <div class="row">
+        <div class="grow-4">
+          <h2>Contacto:</h2> 
+          <ul>
+            <li>info@iesalandalus.org</li>
+            <li>950156936</li>
+          </ul>
+          <h2>Siguenos en:</h2>
+          <ul class="redes-sociales">
+            <li><a href="https://www.facebook.com/iesalandalusAlmeria"><img src="./imagenes/iconos/social-facebook-button-blue-icon.png" alt="Icono de Facebook"></a></li>
+            <li><a href="https://twitter.com/iesalandalusorg?lang=es"><img src="./imagenes/iconos/Twitter-icon.png" alt="Icono de Twitter"></a></li>
+          </ul>
+        </div>
+        <div class="grow-4"><a href="./sobre-nosotros.html"><img src="./imagenes/establecimiento/libreria-interior-5-edit.jpg" alt="Imagen de la parte interior del establecimiento" class=img-footer></a></div>
+        <!-- <div class="grow-6"><img src="./imagenes/establecimiento-interior.png" alt="Imagen de la parte interior del establecimiento" class=img-footer></div> -->
+        <div class="grow-4">
+          <h2>Localización:</h2>
+          <p>I.E.S. Al-Andalus, Almería <br>
+            Finca Santa Isabel s/n <br>
+            04008 <br></p>
+          <h2><a href="./sobre-nosotros.html" id="enlace-sobre-nosotros">Sobre nosotros</a></h2>
+        </div>
+      </div>
+      <hr>
+      <h1>© 2021 Librerías Planeta</h1>
+    </footer>
+    <span id="bt-scroll-top" class="fas fa-arrow-circle-down fa-2x"></span>
+  </div>
+</body>
+</html>

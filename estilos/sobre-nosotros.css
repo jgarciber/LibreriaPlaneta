@@ -1,0 +1,48 @@
+#contenedor-sobre-nosotros{
+   margin: auto;
+   width: 768px;
+}
+.iframe-sobre-nosotros{
+   /* Aspect ratio-> 19:6 */
+   width: 768px;
+   height: 432px;
+}
+
+
+@media (max-width: 1150px) {
+   .img-sobre-nosotros, 
+   #contenedor-sobre-nosotros,
+   .iframe-sobre-nosotros{
+      /* 70%*768px = 537,6 ~538px */
+      width: 538px;
+   }
+   /* Para que los iframe sean responsive es necesario especificar el ancho y alto. Al establecer el height en auto con width fijo se queda muy pequeño */
+   .iframe-sobre-nosotros{
+      /* 70%*432px = 302,4px ~303px */
+      height: 303px;
+   }
+}
+@media (max-width: 700px) {
+   .img-sobre-nosotros, 
+   #contenedor-sobre-nosotros,
+   .iframe-sobre-nosotros{
+      /* 47%*768px = 361px */
+      width: 361px;
+   }
+   .iframe-sobre-nosotros{
+      /* 47%*432px = 216px */
+      height: 216px;
+   }
+}
+@media (max-width: 450px) {
+   .img-sobre-nosotros, 
+   #contenedor-sobre-nosotros,
+   .iframe-sobre-nosotros{
+      /* 30%*768px */
+      width: 230px;
+   }
+   .iframe-sobre-nosotros{
+      /* 30%*432px*/
+      height: 130px;
+   }
+}

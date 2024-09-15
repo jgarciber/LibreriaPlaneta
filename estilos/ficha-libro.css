@@ -1,0 +1,153 @@
+.sinopsis {
+    padding: 20px;
+}
+
+.fichaLibroCompleta,
+.sinopsis{
+    border-radius: 8px;
+}
+
+.opiniones{
+    border: solid;
+}
+
+.sinopsis{
+    border-radius: 8px;
+}
+.sinopsis ul{
+    /* all: initial; */
+    list-style-type: circle;
+    padding: 0px 0px 0px 30px;
+}
+
+div.libroCompleto {
+    padding: 0px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.fichaLibroCompleta {
+    width: 700px;
+    margin: 10px 0;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: top;
+}
+
+div.relacionados {
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#contenedor-libros-relacionados {
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.libroIndex,
+div.fichaLibro {
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+div.fichaLibroCompleta, div.fichaLibro{
+    /* background-color: #99CC66; */
+}
+
+div.libroCompleto .portada-libro {
+    width: 220px;
+    max-width: 220px;
+    height: auto;
+}
+
+div.relacionados .libroIndex .portada-libro {
+    max-width: 143px;
+    height: auto;
+}
+
+div.relacionados .libroIndex .fichaLibro {
+    /* align-content: center; */
+    max-width: 200px;
+    height: auto;
+    background-color: #99CC66;
+}
+
+.comentario {
+    padding: 0 20px;
+    background-color: white;
+}
+
+.cabecera-comentario div {
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.cabecera-comentario div {
+    border-style: solid solid solid none;
+}
+.cabecera-comentario div:last-child {
+    border-right: 0;
+}
+.opinion:first-child .cabecera-comentario div{
+    border-top: none;
+}
+
+.full-star, .half-star{
+    color: yellow; 
+    margin: 11px 0px;
+}
+
+.sinopsis, .opiniones{
+    background-color: #cccc99;
+}
+
+.audio ul li{
+    display: inline;
+}
+.audio audio{
+    max-width: 100%;
+}
+
+@media (max-width: 450px) {
+    /* Todos tendrán borde superior excepto la primera celda de la primera linea */
+    /* Restablezco el borde superior de la primera tupla para despues quitar solo el borde superior de la primera "celda" */
+    .opinion:first-child .cabecera-comentario div{
+        border-top: solid;
+    }
+    .opinion:first-child .cabecera-comentario div:first-child{
+        border-top: 0;
+    }
+    .cabecera-comentario div {
+        border-style: solid none none none;
+    }
+    .comentario {
+        border-top: solid;
+    }
+}
+
+@media (max-width: 650px) {
+    .contenedor-portada-libro{
+        min-height: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    div.fichaLibroCompleta {
+        width: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

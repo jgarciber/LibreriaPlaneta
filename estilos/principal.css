@@ -1,0 +1,782 @@
+/* Los estilos se aplican primero para las medidas de un móvil. Si el tamaño de la pantalla del dispotivo es más grande, por ejemplo, una tablet o un portátil, aunque se heredaran las propiedades del móvil, se sobreescribirán las necesarias para adaptarse al nuevo dispositivo. Por ejemplo se cambia el layout, el tamaño de la fuente, etc Esto se logra mediante la media-queries, estableciendo un min-width*/
+
+/* Paleta colores original */
+
+    /* header, footer{background-color: #669966;}
+    nav{background-color: #CC9999;}
+    aside{background-color: #99CC66;}
+    section{background-color: #CCCC99;}
+    div.fichaLibro {background-color: #99CC66;} */
+
+/* Paleta alternativa 1 */
+
+header, footer{background-color: #669966;}
+nav{background-color: #CC9999;}
+aside{background-color: #99CC66;}
+section{background-color: white;}
+div.fichaLibro{background-color: #CCCC99;}
+
+
+/* Layout para móvil */
+
+.main-header {grid-area: header;}
+.main-nav {grid-area: nav;}
+.main-aside {grid-area: aside;}
+.main-section {grid-area: section;}
+.main-footer {grid-area: footer;}
+
+.container-main-grid {
+    display: grid;
+    margin: 0 3%;
+    grid-gap: 6px;
+}
+
+.container-main-grid {
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "section" "footer";
+}
+
+.main-nav,
+.main-aside {
+    display: none;
+}
+
+*{
+    font-size: 18px;
+}
+
+.audio, audio{
+    z-index: 0;
+}
+
+body {
+    /* font-family: Verdana; */
+    /* font-family: 'Times New Roman'; */
+    /* font-family: Playfair Display; */
+    /* font-family: Helvetica; */
+    font-family: Sans-serif;
+    /* font-family: Georgia; */
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    padding: 10px;
+    color: #ffff00;
+    font-size: 1rem;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 0.73rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 0.68rem;
+}
+
+p,
+section li,
+a {
+    font-size: 0.65rem;
+    line-height: 1rem;
+}
+
+nav {
+    /* font-size: 0.75rem; */
+    text-align: center;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 0.67rem;
+}
+
+aside {
+    padding: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+aside li{
+    font-size: 0.6rem;
+    font-weight: normal;
+}
+
+footer li{
+    /* Tamaño de fuente igual que el párrafo */
+    font-size: 0.65rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul b{
+    font-size: 0.67rem;
+}
+
+.main-header,
+.main-nav,
+.main-aside,
+.main-section,
+.main-footer,
+img, object{
+    border-radius: 6px;
+}
+
+#bt-scroll-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: 0.3s;
+    opacity: 0.5;
+    /* display: none; */
+}
+#bt-scroll-top:hover{
+    /* transform: scale(1.5); */
+    color: maroon;
+    opacity: 1;
+}
+.rotate180{
+    transform: rotate(180deg);
+}
+#bt-scroll-top.rotate180:hover{
+    /* transform: scale(1.5); */
+    transform: rotate(180deg);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#mensajesAJAXCursor {
+    position: absolute;
+    opacity: 1;
+    background-color: whitesmoke;
+}
+/* #mensajesAJAXEsquina {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    opacity: 1;
+    background-color: whitesmoke;
+} */
+
+.main-header .row, .main-footer .row{
+    align-items: center;    
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 100%;
+    min-height: 80%;
+    /* border: solid 3px transparent; */
+}
+
+.icono {
+    max-width: 100%;
+    min-height: 100%;
+    /* border: solid 3px transparent; */
+}
+
+.logo, .icono{
+    box-shadow: 3px 3px 3px #000000;
+    margin: 5px 0;
+    transition: 0.1s ease-in-out;
+}
+
+.logo:hover{
+    box-shadow: 3px 3px 6px 1px #ffff00;
+    transform: scale(1.1);
+}
+.icono:hover{
+    box-shadow: 3px 3px 6px 1px #ffff00;
+    transform: scale(1.2);
+}
+
+.btn-search{
+    transition: 0.1s ease-in-out;
+}
+.btn-search:hover{
+    border-radius: 3px;
+    background-color: #CC9999;
+    transform: scale(1.4);
+}
+
+.icono-lenguaje{
+    border: transparent solid 3px; 
+    transition: 0.1s ease-in-out;
+}
+
+.icono-lenguaje:hover{
+    /* border: solid 2px; */
+    transform: scale(1.3);
+}
+
+/* #enlace-sobre-nosotros:link {color: black;}
+#enlace-sobre-nosotros:visited {color: black;} */
+
+.redes-sociales li{
+    display: inline;
+}
+.redes-sociales li img{
+    transition: 0.1s ease-in-out;
+}
+.redes-sociales li img:hover{
+    transform: scale(1.3);
+}
+
+.barra-busqueda{
+    width: 150px;
+    /* height: 30px; */
+}
+.barra-busqueda::placeholder{
+    font-size: 0.7rem;
+}
+
+.btAnadirCarrito {
+    border: 1px solid;
+    /* border-color: #99CC66; */
+    border-radius: 6px;
+    transition: 0.1s ease-in-out;
+    font-size: 0.7rem;
+}
+
+.btAnadirCarrito:hover {
+    background-color: green;
+    color: white;
+    border-color: green;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.img-footer{
+    /* max-width: 40%; */
+    /* Para que flexbox funcione correctamente, el max-width debe indicarse en pixeles en vez de porcentajes */
+    max-width: 270px;
+}
+
+/* Descripción que aparece a la derecha del libro */
+
+div.fichaLibro {
+    /* padding: 0px 15px 10px; */
+    padding: 0px 5px 10px;
+    border: solid 1px;
+    border-radius: 8px;
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* Alineo a los extremos para que el botón "añadir al carrito" siempre esté a la misma altura */
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    /* min-width: 130px; */
+    /* max-width: 180px; */
+    /* width: 170px; */
+    width: 85px;
+    /* display: none; */
+}
+
+.precio::after{
+    content: " €";
+}
+
+#carrito *{
+    font-size: 0.6rem;
+}
+#carrito p{
+    font-size: 0.6rem;
+    line-height: 50%;
+}
+#carrito{
+    z-index: 1;
+    max-height: 440px;
+    overflow-y: scroll;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+    color: black;
+    position: fixed;
+    top: 8px;
+    /* top: 40px; */
+    right: 40px;
+    display: none;
+    background-color: whitesmoke;
+}
+#cabecera-carrito{
+    z-index: 1;
+    padding: 5px;
+    border-radius: 3px;
+    /* background-color: #CC9999; */
+    /* background-color: #99CC66; */
+    background-color: #CCCC99;
+    /* background-color: #669966; */
+    /* position: sticky;
+    top: 0; */
+}
+#precio-total{
+    padding: 5px;
+    border-radius: 3px;
+    /* background-color: #CC9999; */
+    /* background-color: #99CC66; */
+    background-color: #CCCC99;
+    /* background-color: #669966; */
+    position: sticky;
+    bottom: 0;
+}
+#precio-total > p{
+    /* position: absolute; */
+    text-align: right;
+    padding-right: 35px;
+    /* right: 0px; */
+}
+#precio-total button{
+    border: 1px solid;
+    border-radius: 6px;
+    transition: 0.1s ease-in-out;
+}
+#precio-total button:hover{
+    background-color: yellowgreen;
+    color: black;
+    /* border-color: green; */
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.btn-aumentar-cantidad, .btn-reducir-cantidad, .btn-cerrar{
+    cursor: pointer;
+    margin: 0px 4px;
+    transform: scale(1.2);
+    transition: 0.1s ease-in-out;
+}
+.btn-aumentar-cantidad:hover, .btn-reducir-cantidad:hover, .btn-cerrar:hover{
+    transform: scale(1.5);
+}
+
+.btn-aumentar-cantidad, .btn-reducir-cantidad{
+    color: green;
+}
+
+#mensajesAJAXEsquina{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    font-size: 0.7em;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-weight: bold;
+    bottom: 80px;
+    right: 30px;
+    opacity: 1;
+}
+
+/* No funciona */
+.icono-carrito:hover #carrito{
+    display: block;
+}
+
+/* Estilos para el carrito de FontAwesome */
+.icono-carrito-fa{
+    color: gold;
+    border: solid;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+/* Estilos para el carrito de creación propia */
+.icono-carrito{
+    margin-top: 4px !important;
+    color: gold;
+    border: solid;
+    border-radius: 10px;
+    padding: 3px;
+}
+/* Estilos para el icono de usuario de FontAwesome */
+.icono-usuario{
+    color: black;
+    border: solid;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+#carrito img{
+    width: 60px;
+}
+
+#table-libros-carrito{
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.producto-al-carrito{
+    position: fixed;
+    animation: productoAlCarrito 2s ease-in;
+    /* animation-name: productoAlCarrito;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+    /* opacity: 1; */
+    /* transform: translate(0px,0px); */
+    /* transform: translate(500px,-500px); */
+}
+
+@keyframes productoAlCarrito{
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        /* right: 0px; */
+        right: 20px;
+        top: 0px;
+        transform: scale(0.4);
+    }
+    100% { 
+        /* right: 0px; */
+        right: 20px;
+        top: 0px;
+        opacity: 0.1;
+        transform: scale(0.1);
+    }
+}
+
+.zarandear{
+    animation: zarandear 0.5s ease-out;
+}
+
+@keyframes zarandear{
+    0% {transform: translate(0,0)}
+    20% {transform: translate(-20px,0)}
+    40% {transform: translate(15px,0)}
+    60% {transform: translate(-10px,0)}
+    80% {transform: translate(5px,0)}
+    100% {transform: translate(0px,0)}
+}
+.zarandear2{
+    animation: zarandear2 0.2s ease-out 3;
+}
+
+@keyframes zarandear2{
+    0% {transform: translate(0,0)}
+    33% {transform: translate(-20px,0)}
+    66% {transform: translate(20px,0)}
+    100% {transform: translate(0px,0)}
+}
+.btn-cerrar{
+    color: red;
+}
+
+#cabecera-carrito > .btn-cerrar{
+    float: right;
+    margin-right: 15px;
+    margin-top: 8px;
+    color: black;
+}
+
+.cantidad-anadir{
+    margin-left: 5px;
+    max-width: 40px;
+    /* max-width: 30px; */
+    /* height: 20px; */
+    font-size: 0.7rem;
+}
+.cantidad-anadir option{
+    font-size: 0.7rem;
+}
+
+#contenedor-libros{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.spinner{
+    /* transform: scale(1.6); */
+    animation: spinner 0.8s infinite linear;
+    /* width: 100px; */
+}
+
+@keyframes spinner {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.select-subcategorias{
+    max-width: 100px;
+    background-color: #CCCC99;
+    font-size: 0.65rem;
+}
+.select-subcategorias option{
+    font-size: 0.65rem;
+}
+
+/* Portada del libro + su descripción a la derecha */
+div.libroIndex {
+    display: flex;
+    /* justify-content: center; */
+    /* margin-left: 10px;
+  margin-right: 10px; */
+    /* min-width: 400px; */
+}
+
+div.libroIndex ul{
+    padding: 0px 8px;
+}
+
+.opciones-libro-index{
+    display:flex;
+    /* align-items:center; */
+}
+
+div.contenedor-portada-libro,
+div.fichaLibro {
+    margin: 8px 4px;
+}
+
+.portada-libro{
+    box-shadow: 5px 5px 5px #454545;
+    transition: 0.1s ease-in-out;
+    /* width: 143px; */
+    width: 100px;
+}
+
+.contenedor-portada-libro{
+    /* min-height: 235px; */
+}
+
+.portada-libro:hover{
+    box-shadow: 5px 5px 8px 1px #000000;
+}
+
+div.tuplaLibros {
+    margin: 0px auto;
+    /* margin: 0px 30px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parejaLibros{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+div.libroIndex {
+    align-items: center;
+    flex-direction: column;
+}
+
+#header-item-1{order: 1;}
+#header-item-2{order: 4;}
+#header-item-3{order: 2;}
+#header-item-4{order: 3;}
+
+
+/* Hasta que el tamaño de la pantalla no supere el max-width, se aplicaran las siguientes propiedades. Permite mantener la alineación horizontal del conjunto de (libros + ficha del libro) hasta que halla espacio suficiente para mostrarlos horizontalmente */
+
+@media (max-width: 1100px) {
+    div.tuplaLibros {
+        flex-wrap: wrap;
+    }
+    div.libroIndex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    div.libroIndex {
+        flex-direction: row;
+    }
+    .main-footer .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    div.libroIndex {
+        flex-direction: column;
+    }
+    div.fichaLibro *{
+        font-size: 0.5rem;
+    }
+    div.fichaLibro .titulo, div.fichaLibro .autor{
+        display: none;
+    }
+
+    .parejaLibros{
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* Diferentes configuraciones para diferentes tamaños. El tamaño superior heredará lo del tamaño inferior, y puede sobreescribir las propiedades necesarias */
+
+
+/* Tamaño de tablet */
+
+@media (min-width: 450px) {
+    * {
+        font-size: 20px;
+    }
+
+    .main-nav,
+    .main-aside {
+        display: block;
+    }
+
+    .container-main-grid {
+        /* grid-template-rows: 120px 50px 1fr 180px; */
+        grid-template-rows: 120px auto auto 1fr auto;
+        /* grid-template-columns: 130px 1fr; */
+        grid-template-areas: 
+            "header" 
+            "nav" 
+            "aside"
+            "section" 
+            "footer";
+    }
+    #header-item-1{order: 1;}
+    #header-item-2{order: 2;}
+    #header-item-3{order: 3;}
+    #header-item-4{order: 4;}
+
+    .logo, .icono{
+        margin: 0 0;
+    }
+
+    aside ul {
+        display: block;
+        width: auto;
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    aside li {
+        display: inline-block;
+        background: #CCCC99;
+        padding: 4px;
+        margin: 4px;
+        border-radius: 6px;
+        border: solid 3px transparent;
+        transition: 0.05s ease-out;
+    }
+
+    aside a:link {color: black; text-decoration: none;}
+    aside a:visited {color: black; text-decoration: none;}
+    aside li:hover {
+        color: black;
+        border: solid 3px;
+        border-radius: 6px;
+        transform: scale(1.2);
+    }
+    aside a:active {color: maroon; font-weight: bold;}
+
+    .row {
+        flex-direction: row;
+    }
+
+    .fichaLibro{
+        min-height: 180px;
+    }
+    div.fichaLibro{
+        /* display: block; */
+        padding: 0px 15px 10px;
+        width: 170px;
+    }
+
+    .portada-libro{
+        width: 143px;
+        max-height: 199px;
+    }
+    #contenedor-ficha-libro-completa .portada-libro{
+        max-height: initial;
+    }
+
+    .grow-1 {flex-grow: 1;}
+    .grow-2 {flex-grow: 2;}
+    .grow-3 {flex-grow: 3;}
+    .grow-4 {flex-grow: 4;}
+    .grow-5 {flex-grow: 5;}
+    .grow-6 {flex-grow: 6;}
+    .grow-7 {flex-grow: 7;}
+    .grow-8 {flex-grow: 8;}
+    .grow-9 {flex-grow: 9;}
+    .grow-10 {flex-grow: 10;}
+    .grow-11 {flex-grow: 11;}
+    .grow-12 {flex-grow: 12;}
+}
+
+
+/* Tamaño ordenador portátil o de escritorio */
+
+@media (min-width: 900px) {
+    * {
+        font-size: 22px;
+    }
+
+    .container-main-grid {
+        /* grid-template-rows: 130px auto 1fr auto; */
+        grid-template-rows: auto auto auto auto;
+        /* grid-template-columns: 200px 1fr; */
+        grid-template-columns: 180px 1fr;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 
+            "header header" 
+            "nav nav" 
+            "aside section" 
+            "footer footer";
+    }
+
+    aside ul {
+        background: #CCCC99;
+        border-radius: 6px;
+        text-align: center;
+    }
+    
+    aside li {
+        display: block;
+        margin: 0 0;
+        border-bottom: 2px solid black;
+        border-top: 2px solid #909090;
+        border-radius: 0;
+    }
+
+    aside li:first-child {
+        border-top: transparent;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+       
+    aside  li:last-child {
+       border-bottom: transparent;
+       border-bottom-left-radius: 6px;
+       border-bottom-right-radius: 6px;
+
+    }
+
+    .barra-busqueda{
+        width: 300px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .fichaLibro{
+        min-height: 200px;
+    }
+}
